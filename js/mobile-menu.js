@@ -48,7 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
 document.addEventListener('DOMContentLoaded', function() {
   const descLinks = document.querySelectorAll('.desc-link');
 
@@ -58,12 +57,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
       const subMenu = this.nextElementSibling;
 
+      document.querySelectorAll('.desc-list.active').forEach(activeSubMenu => {
+        if (activeSubMenu !== subMenu) {
+          activeSubMenu.classList.remove('active');
+        }
+      });
+
       if (subMenu && subMenu.classList.contains('desc-list')) {
         subMenu.classList.toggle('active'); 
       }
     });
   });
 });
+
 
 
 

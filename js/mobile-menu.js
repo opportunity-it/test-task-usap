@@ -49,13 +49,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  const descLinks = document.querySelectorAll('.desc-link');
+  const descItems = document.querySelectorAll('.desc-item');
 
-  descLinks.forEach(link => {
-    link.addEventListener('click', function(event) {
+  descItems.forEach(item => {
+    item.addEventListener('click', function(event) {
       event.preventDefault(); 
 
-      const subMenu = this.nextElementSibling;
+      const subMenu = this.querySelector('.desc-list');
 
       document.querySelectorAll('.desc-list.active').forEach(activeSubMenu => {
         if (activeSubMenu !== subMenu) {
@@ -63,12 +63,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
 
-      if (subMenu && subMenu.classList.contains('desc-list')) {
+      if (subMenu) {
         subMenu.classList.toggle('active'); 
       }
     });
   });
 });
+
 
 
 

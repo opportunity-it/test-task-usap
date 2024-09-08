@@ -51,12 +51,12 @@ button {
   }
 }
 
-@media screen and (min-width: 1680px) {
+@media screen and (min-width: 1200px) {
   .container {
     padding-right: 20px;
     padding-left: 20px;
 
-    max-width: 1680px;
+    max-width: 1200px;
   }
 }
 
@@ -105,7 +105,7 @@ button {
   background-color: #e7f9c0;
 }
 
-@media screen and (min-width:1680px) {
+@media screen and (min-width:1200px) {
   .header-first{
     padding-top: 17px;padding-bottom: 17px;
   }
@@ -124,14 +124,14 @@ button {
   justify-content: space-between;
 }
 
-@media screen and (min-width:768px) and (max-width:1679px) {
+@media screen and (min-width:768px) and (max-width:1199px) {
   .header-list{
 flex-direction: column;
 align-items: flex-start;
   }
 }
 
-@media screen and (min-width:1680px) {
+@media screen and (min-width:1200px) {
   .header-list{
     gap: 45px;
   }
@@ -144,13 +144,13 @@ align-items: flex-start;
   flex-shrink: 0;
 }
 
-@media screen and (max-width:1679px) {
+@media screen and (max-width:1199px) {
   .header-item{
     max-width: 107px;
      }
 }
 
-@media screen and (min-width:1679px) {
+@media screen and (min-width:1199px) {
   .header-item{
         gap: 14px;
   }
@@ -167,7 +167,7 @@ align-items: flex-start;
   height: 18px;
 }
 
-@media screen and (min-width:1680px) {
+@media screen and (min-width:1200px) {
  .header-icon{
   width: 26px;height: 26px;
  } 
@@ -180,7 +180,7 @@ align-items: flex-start;
   color: var(--main-color);
 }
 
-@media screen and (max-width:1679px) {
+@media screen and (max-width:1199px) {
   .header-link.map {
     max-width: 83px;
   }
@@ -196,11 +196,15 @@ align-items: flex-start;
   text-align: left;
 }
 
-@media screen and (min-width:1680px) {
+@media screen and (min-width:1200px) {
  .about-list{
   display: flex;
   gap: 45px;
  } 
+}
+
+.about-item:not(:last-child){
+  margin-bottom: 10px;
 }
 
 .about-link{
@@ -217,7 +221,7 @@ align-items: flex-start;
   justify-content: space-between;
 }
 
-@media screen and (min-width:768px) and (max-width:1679px) {
+@media screen and (min-width:768px) and (max-width:1199px) {
   .container-header-second{
 flex-direction: column;
 gap: 50px;
@@ -234,7 +238,7 @@ gap: 50px;
   }
 }
 
-@media screen and (min-width:1680px) {
+@media screen and (min-width:1200px) {
   .logo-link{
     width: 217px;height: 60px;
   }
@@ -255,19 +259,28 @@ gap: 50px;
 @media screen and (max-width: 767px) {
   .desctop-list {
     display: none;
+
+   gap: 20px;
+
   }
 }
 
 @media screen and (min-width: 768px) {
   .desctop-list {
    display: flex;
+   align-items: center;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .desctop-list {
    gap: 20px;
   }
 }
 
-@media screen and (min-width: 1680px) {
+@media screen and (min-width: 1200px) {
   .desctop-list {
-   gap: 40px;
+   gap: 5px;
   }
 }
 
@@ -276,9 +289,22 @@ gap: 50px;
 }
 
 .desc-list.active {
-  display: flex;
-  flex-direction: column;
-  gap: 10px
+position: absolute;
+top: 100%;
+left: 0;
+
+padding: 10px;
+
+display: flex;
+flex-direction: column;
+gap: 10px;
+background-color: rgb(51, 51, 51);
+}
+
+.desc-item{
+  position: relative;
+
+  z-index: 2;
 }
 
 .desc-link{
@@ -287,15 +313,20 @@ align-items: center;
 
 width: 100%;
 
-  font-size: 18px;
+  font-size: 17px;
   font-weight: var(--main-font-weight);
   line-height: calc(22/18);
 
     color: var(--main-color);
 }
 
+.desc-icon{
+  stroke: var(--main-color);
+  fill: none;
+}
+
 .desc-sub-link{
-  color: var(--main-color);
+  color: #ffffff;
 }
 
 .desc-sub-link.all{
@@ -325,7 +356,7 @@ align-items: center;
  justify-content: space-between;
 }
 
-@media screen and (min-width:1680px) {
+@media screen and (min-width:1200px) {
   .wrapper-search-button {
     gap: 16px;
   }
@@ -349,13 +380,13 @@ align-items: center;
 
 @media screen and (min-width:768px) {
   .form-input{
-    max-width: 300px;
+    min-width: 300px;
   }
 }
 
-@media screen and (min-width:1680px) {
+@media screen and (min-width:1200px) {
   .form-input{
-    max-width: 221px;
+    min-width: 219px;
   }
 }
 
@@ -370,6 +401,24 @@ align-items: center;
   position: absolute;
   top: 18px;
   right: 18px;
+  
+  width: 16px;
+  height: 16px;
+}
+
+@media screen and (min-width:768px) {
+  .button-form {
+top: 13px;
+right: 25px;
+
+  width: 26px;
+  height: 26px;
+}
+}
+
+.form-icon{
+  width: 100%;
+  height: 100%;
 }
 
 .mobile-open {
@@ -454,7 +503,7 @@ display: none;
   border-radius: 50%;
 }
 
-@media screen and (max-width:1679px) {
+@media screen and (max-width:1199px) {
   .button-language-desc{
     display: none;
   }

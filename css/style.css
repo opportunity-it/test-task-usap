@@ -116,6 +116,7 @@ button {
   .container-header-first {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -205,8 +206,10 @@ button {
   }
 }
 
-.about-item:not(:last-child) {
+@media screen and (max-width:1199px) {
+  .about-item:not(:last-child) {
   margin-bottom: 10px;
+}
 }
 
 .about-link {
